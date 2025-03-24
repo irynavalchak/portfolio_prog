@@ -47,7 +47,7 @@ ul, ol {
 .networks_container li a {
     font: 500 1rem "Roboto", sans-serif;
     color: #fff !important;
-    background-color: #5904AF;
+    background-color: #EA6B39;
     padding: 0.5rem 2rem;
     border-radius: 1rem;
     text-align: center;
@@ -83,12 +83,24 @@ ul, ol {
 }
 
 .banner_container img {
-    width: 20rem;
-    height: 20rem;
+    width: 25rem;
+    height: 25rem;
     border-radius: 50%;
 }
 
-.banner_container button {
+.banner_container button:first-of-type {
+    font: 500 1rem "Roboto", sans-serif;
+    color: #fff !important;
+    background-color: #EA6B39;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.banner_container button:last-child {
     font: 500 1rem "Roboto", sans-serif;
     color: #5904AF !important;
     background-color: #fff ;
@@ -97,4 +109,9 @@ ul, ol {
     text-align: center;
     border: none;
     cursor: pointer;
+}
+
+.img_bg {
+    background-color: #ffffff;
+    border-radius: 50%;
 }
