@@ -1,0 +1,100 @@
+*,
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.container {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.header_container ul, .logo_container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header_container ul li a {
+    font: 500 1rem "Roboto", sans-serif;
+    color: #5904AF;
+    cursor: pointer;
+}
+
+.logo_container img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.networks_container li a {
+    font: 500 1rem "Roboto", sans-serif;
+    color: #fff !important;
+    background-color: #5904AF;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.banner {
+    height: 100%;
+    background: rgb(137,166,143);
+    background: linear-gradient(131deg, rgb(89 4 175) 46%, rgba(255,255,255,1) 90%);
+}
+
+.banner_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7rem 2rem;
+}
+
+.banner_container > div {
+    max-width: 30rem;
+}
+
+.banner_container > div > h1 {
+    font: 500 4rem "Roboto", sans-serif;
+    color: #ffff;
+    margin-bottom: 1rem;
+}
+
+.banner_container > div > p {
+    font: 400 1rem/2rem "Roboto", sans-serif;
+    color: #ffff;
+    margin-bottom: 2rem;
+}
+
+.banner_container img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+}
+
+.banner_container button {
+    font: 500 1rem "Roboto", sans-serif;
+    color: #5904AF !important;
+    background-color: #fff ;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
