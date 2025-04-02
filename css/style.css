@@ -19,6 +19,10 @@ ul, ol {
     margin: 0 auto;
 }
 
+header {
+    background: rgb(89,4,175);
+}
+
 .header_container {
     display: flex;
     justify-content: space-between;
@@ -34,7 +38,7 @@ ul, ol {
 
 .header_container ul li a {
     font: 500 1rem "Roboto", sans-serif;
-    color: #5904AF;
+    color: #ffffff;
     cursor: pointer;
 }
 
@@ -53,10 +57,15 @@ ul, ol {
     text-align: center;
 }
 
+.networks_container li a:hover {
+    background-color: #f89a76;
+    transition: ease 1s;
+}
+
 .banner {
     height: 100%;
-    background: rgb(137,166,143);
-    background: linear-gradient(131deg, rgb(89 4 175) 46%, rgba(255,255,255,1) 90%);
+    background: rgb(89,4,175);
+    background: linear-gradient(183deg, rgba(89,4,175,1) 28%, rgba(255,255,255,1) 100%);
 }
 
 .banner_container {
@@ -100,6 +109,12 @@ ul, ol {
     margin-right: 2rem;
 }
 
+.banner_container button:first-of-type:hover {
+    background-color: #f89a76;
+    transition: ease 1s;
+}
+
+
 .banner_container button:last-child {
     font: 500 1rem "Roboto", sans-serif;
     color: #5904AF !important;
@@ -110,6 +125,12 @@ ul, ol {
     border: none;
     cursor: pointer;
 }
+
+.banner_container button:last-child:hover {
+    background-color: #b288dc;
+    transition: ease 1s;
+}
+
 
 .img_bg {
     background-color: #ffffff;
