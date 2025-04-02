@@ -20,7 +20,7 @@ ul, ol {
 }
 
 header {
-    background: rgb(89,4,175);
+    background: rgb(255, 255, 255);
 }
 
 .header_container {
@@ -38,7 +38,7 @@ header {
 
 .header_container ul li a {
     font: 500 1rem "Roboto", sans-serif;
-    color: #ffffff;
+    color: rgba(89, 4, 175, 0.86);
     cursor: pointer;
 }
 
@@ -62,13 +62,14 @@ header {
     transition: ease 1s;
 }
 
-.banner {
+.banner, .about, .experience, .education, .contact, .skills, .certification {
     height: 100%;
-    background: rgb(89,4,175);
-    background: linear-gradient(183deg, rgba(89,4,175,1) 28%, rgba(255,255,255,1) 100%);
+    /*background-color: #d0e0e3;*/
+    /*background: rgb(89,4,175);*/
+    /*background: linear-gradient(183deg, rgba(89,4,175,1) 28%, rgba(255,255,255,1) 100%);*/
 }
 
-.banner_container {
+.banner_container, .about_container, .experience_container, .education_container, .education_container, .contact_container, .skills_container, .certification_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -80,14 +81,14 @@ header {
 }
 
 .banner_container > div > h1 {
-    font: 500 4rem "Roboto", sans-serif;
-    color: #ffff;
+    font: 500 3rem "Roboto", sans-serif;
+    color: rgba(89, 4, 175, 0.86);
     margin-bottom: 1rem;
 }
 
 .banner_container > div > p {
     font: 400 1rem/2rem "Roboto", sans-serif;
-    color: #ffff;
+    color: rgba(89, 4, 175, 0.86);
     margin-bottom: 2rem;
 }
 
@@ -115,10 +116,10 @@ header {
 }
 
 
-.banner_container button:last-child {
+.banner_container a:last-child {
     font: 500 1rem "Roboto", sans-serif;
-    color: #5904AF !important;
-    background-color: #fff ;
+    color: #ffffff !important;
+    background-color: rgba(89, 4, 175, 0.86);
     padding: 0.5rem 2rem;
     border-radius: 1rem;
     text-align: center;
@@ -126,13 +127,37 @@ header {
     cursor: pointer;
 }
 
-.banner_container button:last-child:hover {
+.banner_container a:last-child:hover {
     background-color: #b288dc;
     transition: ease 1s;
 }
 
-
 .img_bg {
     background-color: #ffffff;
     border-radius: 50%;
+}
+
+.about_container, .education_container, .experience_container, .contact_container, .certification_container {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact_container{
+    justify-content: space-between;
+}
+
+.certification_container img {
+    width: 25rem;
+    height: 16rem;
+}
+
+.certification_container .certification_inner_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.certification_inner_container > div {
+    background: rgba(89, 4, 175, 0.86);
+    padding: 1rem 2rem;
 }
