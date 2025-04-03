@@ -74,3 +74,24 @@ document.addEventListener("DOMContentLoaded", function () {
     updateActiveLink();
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const aboutSection = document.querySelector(".about");
+    const keys = document.querySelectorAll(".key_cards li");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                keys.forEach((key, index) => {
+                    setTimeout(() => {
+                        key.classList.add("pressed");
+                        setTimeout(() => key.classList.remove("pressed"), 300);
+                    }, index * 200); // Натискання кожні 200 мс
+                });
+
+                observer.unobserve(aboutSection); // Виконується тільки один раз
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(aboutSection);
+});

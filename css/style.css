@@ -28,7 +28,7 @@ body {
 }
 
 .container {
-    max-width: 80rem;
+    max-width: 100rem;
     /*margin: 0 auto;*/
     /*display: flex;*/
     /*flex-direction: column;*/
@@ -166,16 +166,29 @@ aside li a:hover {
     color: #1a213d;
     background-color: #58dbd4;
     padding: 0.5rem 2rem;
-    border: 1px solid #ffffff;
     border-radius: 1rem;
     transition: ease 1s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    min-width: 2.5rem;
+    text-align: center;
 }
 
-.banner_container a:hover {
-    color: #1a213d;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid #1a213d;
+.banner_container a:active {
+    box-shadow: 0 2px 0 #b0b0b0, 0 3px 6px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
 }
+
+/*.banner_container a:hover {*/
+/*    color: #1a213d;*/
+/*    background-color: rgba(255, 255, 255, 0.1);*/
+/*    border: 1px solid #1a213d;*/
+/*}*/
 
 .about_container, .education_container, .experience_container, .contact_container, .skills_container, .certification_container {
     flex-direction: column;
@@ -211,7 +224,7 @@ aside li a:hover {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 0.5rem;
     margin: 0 auto;
 }
 .key_cards li {
@@ -222,20 +235,28 @@ aside li a:hover {
     background-color: #58dbd4;
     color: #1a213d;
     text-transform: uppercase;
-    padding: 0.5rem 1rem;
     border-radius: 8px;
-    border: 2px solid #d1d1d1;
-    box-shadow: 0 4px 0 #b0b0b0, 0 6px 10px rgba(0, 0, 0, 0.2);
+    /*border: 2px solid #d1d1d1;*/
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     font-size: 1rem;
     line-height: 1.5rem;
     min-width: 2.5rem;
     text-align: center;
+    padding: 1rem;
+    border: 1px solid #1a213d;
 }
 
 .key_cards li:active {
     box-shadow: 0 2px 0 #b0b0b0, 0 3px 6px rgba(0, 0, 0, 0.2);
     transform: translateY(2px);
 }
+
+.pressed {
+    transform: translateY(5px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
 
 
 .skills_container > div {
@@ -307,7 +328,7 @@ aside li a:hover {
 /*    }*/
 /*}*/
 .card {
-    /*width: 100%;*/
+    width: 100%;
     font: 600 1rem/2rem "Open Sans", sans-serif;
     color: #1a213d;
     background-color: rgba(255, 255, 255, 0.1);
@@ -318,6 +339,205 @@ aside li a:hover {
     margin-bottom: 2rem;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px #1a213d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
+
+@media screen and (max-width: 1500px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+        position: static;
+        /*padding: 2rem;*/
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    aside h1 {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    aside p {
+        margin-bottom: 1rem;
+    }
+
+    aside ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        gap: 1rem;
+    }
+
+    .container {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 2rem;
+    }
+
+    .banner {
+        height: auto;
+        padding: 4rem 0;
+    }
+
+    .banner_container img {
+        width: 18rem;
+        height: 18rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .skills_container > div {
+        flex-wrap: wrap;
+    }
+
+    .skills_card {
+        width: calc(50% - 1rem);
+    }
+
+    .banner_container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .banner_container > div {
+        margin-top: 2rem;
+    }
+
+    .certification_inner_container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    aside {
+        padding: 1.5rem;
+    }
+
+    aside h1 {
+        font-size: 1.5rem;
+    }
+
+    aside p {
+        font-size: 1.2rem;
+    }
+
+    .key_cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .key_cards li {
+        width: calc(33.33% - 0.5rem);
+        margin-bottom: 0.5rem;
+    }
+
+    .skills_card {
+        width: 100%;
+    }
+
+    .banner_container img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .banner_container > div > h2 {
+        font-size: 1.3rem;
+    }
+
+    .banner_container > div > p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .certification_container img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Styles for mobile phones */
+@media screen and (max-width: 576px) {
+    aside ul {
+        justify-content: center;
+    }
+
+    aside li a {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .key_cards li {
+        width: calc(50% - 0.5rem);
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .banner_container > div > p {
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+
+    .banner_container a {
+        padding: 0.4rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem !important;
+    }
+
+    h2 {
+        font-size: 1.2rem !important;
+    }
+
+    .banner_container img {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .about_container p,
+    .experience_container .card,
+    .education_container .card {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+}
+
+/* Styles for very small devices */
+@media screen and (max-width: 375px) {
+    aside h1 {
+        font-size: 1.3rem;
+    }
+
+    aside p {
+        font-size: 1rem;
+    }
+
+    .key_cards li {
+        width: 100%;
+    }
+
+    .banner_container img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .banner_container > div > h2 {
+        font-size: 1.1rem;
+    }
+
+    .banner_container > div > p {
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+}
+
 
